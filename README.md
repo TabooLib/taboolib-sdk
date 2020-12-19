@@ -3,8 +3,8 @@
 ## TabooLib Settings
 ```groovy
 taboolib {
-    tabooLibVersion = '5.44'
-    loaderVersion = '2.7'
+    tabooLibVersion = '5.45'
+    loaderVersion = '2.9'
     classifier = null
 }
 ```

@@ -27,9 +27,6 @@ dependencies {
 }
 
 processResources {
-    from(sourceSets.main.allSource) {
-        exclude 'plugin.yml'
-    }
     from(sourceSets.main.resources.srcDirs) {
         include 'plugin.yml'
         expand(

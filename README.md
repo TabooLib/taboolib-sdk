@@ -1,50 +1,20 @@
 # TabooLib SDK
 
-## TabooLib Settings
+## Settings
 ```groovy
 taboolib {
     tabooLibVersion = '5.45'
     loaderVersion = '2.9'
     classifier = null
+    // relocate package
+    relocate('io.izzel.taboolib', 'ink.ptms.taboolib')
 }
 ```
 
-### Main class
-In `Java`
-```java
-public class ExamplePlugin extends Plugin {
-
-    @Override
-    public void onLoad() {
-        // override onLoad()
-    }
-
-    @Override
-    public void onEnable() {
-        // override onEnable()
-    }
-
-    @Override
-    public void onDisable() {
-        // override onDisable()
-    }
+## Release Source Code
+````groovy
+processResources {
+    from(sourceSets.main.allSource) {
+    exclude 'plugin.yml'
 }
-```
-
-In `Kotlin`
-```kotlin
-object ExamplePlugin : Plugin() {
-
-    override fun onLoad() {
-        // override onLoad()
-    }
-
-    override fun onEnable() {
-        // override onEnable()
-    }
-
-    override fun onDisable() {
-        // override onDisable()
-    }
-}
-```
+````

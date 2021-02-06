@@ -4,7 +4,7 @@
 ```groovy
 taboolib {
     tabooLibVersion = '5.54'
-    loaderVersion = '2.10'
+    loaderVersion = '2.11'
     classifier = null
     // relocate package
     relocate('io.izzel.taboolib', 'ink.ptms.taboolib')

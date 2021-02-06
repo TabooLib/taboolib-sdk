@@ -12,7 +12,7 @@ targetCompatibility = '1.8'
 
 taboolib {
     tabooLibVersion = '5.54'
-    loaderVersion = '2.10'
+    loaderVersion = '2.11'
     classifier = null
     builtin = true
 }
@@ -22,9 +22,9 @@ repositories {
 }
 
 dependencies {
-    compile 'ink.ptms.core:v11600:11600:all'
-    compile 'org.jetbrains.kotlin:kotlin-stdlib'
-    compileOnly fileTree(dir: 'libs', includes: ['*.jar'])
+    implementation 'ink.ptms.core:v11600:11600:all'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+    implementation fileTree(dir: 'libs', includes: ['*.jar'])
 }
 
 processResources {

@@ -3,7 +3,7 @@
 ## Settings
 ```groovy
 taboolib {
-    tabooLibVersion = '5.58'
+    tabooLibVersion = '5.59'
     loaderVersion = '2.12'
     classifier = null
     // relocate package

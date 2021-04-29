@@ -1,7 +1,4 @@
-# TabooLib
-A powerful framework for creating bukkit plugin.
-
-## Building
+# Building
 
 * [Gradle](https://gradle.org/) - Dependency Management
 

@@ -1,22 +1,22 @@
-# TabooLib SDK
+# TabooLib
+A powerful framework for creating bukkit plugin.
 
-## Settings
-```groovy
-taboolib {
-    tabooLibVersion = '5.63'
-    loaderVersion = '2.12'
-    classifier = null
-    // relocate package
-    relocate('io.izzel.taboolib', 'ink.ptms.taboolib')
-    // built-in
-    builtin = true
-}
+## Building
+
+* [Gradle](https://gradle.org/) - Dependency Management
+
+The GradleWrapper in included in this project.
+
+On Windows:
+
+```
+gradlew.bat clean build shadowJar
 ```
 
-## Release Source Code
-````groovy
-processResources {
-    from(sourceSets.main.allSource) {
-    exclude 'plugin.yml'
-}
-````
+On MacOS/Linux:
+
+```
+./gradlew clean build shadowJar
+```
+
+Build artifacts should be found in `./build/libs` folder.

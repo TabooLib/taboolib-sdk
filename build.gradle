@@ -11,7 +11,7 @@ sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 taboolib {
-    tabooLibVersion = '5.63'
+    tabooLibVersion = '5.64'
     loaderVersion = '2.12'
     classifier = null
     builtin = true
@@ -28,6 +28,10 @@ dependencies {
 }
 
 processResources {
+    // 是否在编译时打包源代码
+    from(sourceSets.main.allSource) {
+        exclude 'plugin.yml'
+    }
     from(sourceSets.main.resources.srcDirs) {
         include 'plugin.yml'
         expand(

@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'io.izzel.taboolib' version '1.3'
     id 'org.jetbrains.kotlin.jvm' version '1.4.0'
+    id 'maven'
 }
 
 group = 'io.izzel.taboolib.example'
@@ -22,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'ink.ptms.core:v11600:11600:all'
+    implementation 'ink.ptms.core:v11604:11604:all'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib'
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
 }
@@ -54,4 +55,22 @@ compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: 'http://ptms.ink:8081/repository/maven-releases/') {
+                authentication(userName: user, password: password)
+            }
+            pom.artifactId = rootProject.name
+            pom.groupId = project.group
+            pom.version = project.version
+            pom.packaging = 'jar'
+        }
+    }
+}
+
+jar {
+    classifier('')
 }

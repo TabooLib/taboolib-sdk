@@ -1,4 +1,4 @@
-package io.izzel.taboolib.example
+package io.izzel.example
 
 import io.izzel.taboolib.loader.Plugin
 

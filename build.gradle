@@ -5,11 +5,11 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.10'
 }
 
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
 group = 'io.izzel.example'
 version = '1.0.0'
-
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
 
 taboolib {
     tabooLibVersion = '5.7.2'
@@ -29,12 +29,7 @@ dependencies {
 }
 
 processResources {
-    // 是否在编译时打包源代码
-    from(sourceSets.main.allSource) {
-        exclude 'plugin.yml'
-    }
-    from(sourceSets.main.resources.srcDirs) {
-        include 'plugin.yml'
+    filesMatching("plugin.yml") {
         expand(
                 name: rootProject.name,
                 main: project.group + ".boot.PluginBoot",
@@ -57,6 +52,16 @@ compileTestKotlin {
     }
 }
 
+java {
+    withSourcesJar()
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${rootProject.name}" }
+    }
+}
+
 uploadArchives {
     repositories {
         mavenDeployer {
@@ -69,12 +74,4 @@ uploadArchives {
             pom.packaging = 'jar'
         }
     }
-}
-
-jar {
-//    classifier('all')
-}
-
-artifacts {
-//    archives shadowJar
 }

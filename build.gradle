@@ -13,7 +13,7 @@ version = '1.0.0'
 
 taboolib {
     tabooLibVersion = '5.7.2'
-    loaderVersion = '3.0.4'
+    loaderVersion = '3.0.5'
     classifier = null
     builtin = true
 }

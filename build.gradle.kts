@@ -5,7 +5,7 @@ plugins {
 }
 
 taboolib {
-    version = "6.0.0-pre1"
+    version = "6.0.0-pre2"
     install("common")
     install("platform-bukkit")
 }
@@ -15,6 +15,8 @@ repositories {
 }
 
 dependencies {
+    compileOnly("ink.ptms.core:v11701:11701:mapped")
+    compileOnly("ink.ptms.core:v11701:11701:universal")
     compileOnly(kotlin("stdlib"))
 }
 

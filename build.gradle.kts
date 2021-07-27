@@ -18,6 +18,7 @@ dependencies {
     compileOnly("ink.ptms.core:v11701:11701:mapped")
     compileOnly("ink.ptms.core:v11701:11701:universal")
     compileOnly(kotlin("stdlib"))
+    compileOnly(fileTree("libs"))
 }
 
 tasks.withType<JavaCompile> {

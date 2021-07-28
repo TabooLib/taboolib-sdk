@@ -5,7 +5,7 @@ plugins {
 }
 
 taboolib {
-    version = "6.0.0-pre2"
+    version = "6.0.0-pre5"
     install("common")
     install("platform-bukkit")
 }

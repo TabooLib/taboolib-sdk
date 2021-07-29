@@ -1,13 +1,13 @@
 plugins {
     java
-    id("io.izzel.taboolib") version "1.10"
+    id("io.izzel.taboolib") version "1.12"
     id("org.jetbrains.kotlin.jvm") version "1.5.10"
 }
 
 taboolib {
-    version = "6.0.0-pre5"
     install("common")
     install("platform-bukkit")
+    version = "6.0.0-pre9"
 }
 
 repositories {

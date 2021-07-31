@@ -7,7 +7,8 @@ plugins {
 taboolib {
     install("common")
     install("platform-bukkit")
-    version = "6.0.0-pre9"
+    classifier = null
+    version = "6.0.0-pre14"
 }
 
 repositories {

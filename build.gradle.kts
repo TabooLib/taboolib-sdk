@@ -8,7 +8,7 @@ taboolib {
     install("common")
     install("platform-bukkit")
     classifier = null
-    version = "6.0.0-pre14"
+    version = "6.0.0-pre39"
 }
 
 repositories {

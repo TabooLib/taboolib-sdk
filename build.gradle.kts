@@ -1,14 +1,13 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     java
-    id("io.izzel.taboolib") version "1.42"
-    id("org.jetbrains.kotlin.jvm") version "1.5.31"
+    id("io.izzel.taboolib") version "2.0.0"
+    id("org.jetbrains.kotlin.jvm") version "1.8.22"
 }
 
 taboolib {
-    install("common")
-    install("platform-bukkit")
-    classifier = null
-    version = "6.0.9-114"
+    version { taboolib = "6.1.0" }
 }
 
 repositories {
@@ -16,8 +15,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("ink.ptms.core:v11701:11701:mapped")
-    compileOnly("ink.ptms.core:v11701:11701:universal")
+    compileOnly("ink.ptms.core:v12004:12004:mapped")
+    compileOnly("ink.ptms.core:v12004:v12004:universal")
     compileOnly(kotlin("stdlib"))
     compileOnly(fileTree("libs"))
 }
@@ -26,7 +25,7 @@ tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
 }
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+tasks.withType<KotlinCompile> {
     kotlinOptions {
         jvmTarget = "1.8"
         freeCompilerArgs = listOf("-Xjvm-default=all")
@@ -36,4 +35,17 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 configure<JavaPluginConvention> {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+// 用于开发模式，删除本地缓存
+tasks.register("refreshDependencies") {
+    doLast {
+        val taboolibFile = File("../../caches/modules-2/files-2.1/io.izzel.taboolib").canonicalFile
+        taboolibFile.listFiles()?.forEach { module ->
+            val file = File(taboolibFile, "${module.name}/${taboolib.version.taboolib}")
+            if (file.exists()) {
+                file.deleteRecursively()
+            }
+        }
+    }
 }

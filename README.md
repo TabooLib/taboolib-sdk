@@ -1,19 +1,17 @@
-# Building
+# TabooLib SDK
 
-* [Gradle](https://gradle.org/) - Dependency Management
+## 构建发行版本
 
-The GradleWrapper in included in this project.
-
-**Windows:**
-
-```
-gradlew.bat clean build
-```
-
-**macOS/Linux:**
+发行版本用于正常使用, 不含 TabooLib 本体。
 
 ```
 ./gradlew clean build
 ```
 
-Build artifacts should be found in `./build/libs` folder.
+## 构建开发版本
+
+开发版本包含 TabooLib 本体, 用于开发者使用, 但不可运行。
+
+```
+./gradlew clean build -Papi
+```

@@ -1,3 +1,4 @@
+import io.izzel.taboolib.gradle.*
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -7,10 +8,15 @@ plugins {
 }
 
 taboolib {
+    env {
+        // 安装模块
+        install(BUKKIT)
+    }
     version { taboolib = "6.1.0" }
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 

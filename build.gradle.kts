@@ -42,16 +42,3 @@ configure<JavaPluginConvention> {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
 }
-
-// 用于开发模式，删除本地缓存
-tasks.register("refreshDependencies") {
-    doLast {
-        val taboolibFile = File("../../caches/modules-2/files-2.1/io.izzel.taboolib").canonicalFile
-        taboolibFile.listFiles()?.forEach { module ->
-            val file = File(taboolibFile, "${module.name}/${taboolib.version.taboolib}")
-            if (file.exists()) {
-                file.deleteRecursively()
-            }
-        }
-    }
-}

@@ -10,7 +10,7 @@ plugins {
 taboolib {
     env {
         // 安装模块
-        install(BUKKIT)
+        install(UNIVERSAL, BUKKIT)
     }
     version { taboolib = "6.1.0" }
 }

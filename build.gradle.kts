@@ -1,9 +1,10 @@
-import io.izzel.taboolib.gradle.*
+import io.izzel.taboolib.gradle.BUKKIT
+import io.izzel.taboolib.gradle.UNIVERSAL
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    id("io.izzel.taboolib") version "2.0.2"
+    id("io.izzel.taboolib") version "2.0.7"
     id("org.jetbrains.kotlin.jvm") version "1.8.22"
 }
 
@@ -21,7 +22,7 @@ repositories {
 
 dependencies {
     compileOnly("ink.ptms.core:v12004:12004:mapped")
-    compileOnly("ink.ptms.core:v12004:v12004:universal")
+    compileOnly("ink.ptms.core:v12004:12004:universal")
     compileOnly(kotlin("stdlib"))
     compileOnly(fileTree("libs"))
 }

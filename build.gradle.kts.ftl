@@ -1,5 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import io.izzel.taboolib.gradle.*
+<#if extraPackages ??>
+<#list extraPackage as extraPackages>
+${extraPackage}
+</#list>
+</#if>
+
 
 plugins {
     java
@@ -21,17 +27,17 @@ taboolib {
         <#if websites ??>
         links {
             <#list website as websites>
-            name("#{website}")
+            name("${website}")
             </#list>
         }
         </#if>
         <#if dependencies ?? || softDependencies??>
         dependencies {
-            <#list dependencies as dependency>
-            name("")
+            <#list dependency as dependencies>
+            name("${dependency}")
             </#list>
-            <#list softDependencies as Softdependency>
-                name("").optional(true)
+            <#list softDependency as softDependencies>
+                name("${softDependency}").optional(true)
             </#list>
         }
         </#if>

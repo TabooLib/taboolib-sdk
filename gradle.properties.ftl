@@ -1,0 +1,2 @@
+group=${group}
+version=${version}

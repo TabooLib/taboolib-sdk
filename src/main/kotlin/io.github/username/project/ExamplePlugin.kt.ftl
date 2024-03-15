@@ -1,11 +1,11 @@
-package io.github.username.project
+package ${group}.${name?lower_case}
 
 import taboolib.common.platform.Plugin
 import taboolib.common.platform.function.info
 
-object ExamplePlugin : Plugin() {
+object ${name} : Plugin() {
 
     override fun onEnable() {
-        info("Successfully running ExamplePlugin!")
+        info("Successfully running ${name}!")
     }
 }

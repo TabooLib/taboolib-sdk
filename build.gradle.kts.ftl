@@ -27,7 +27,7 @@ taboolib {
         <#if authors ??>
         contributors {
             <#list authors as author>
-            name(${author})
+            name("${author}")
             </#list>
         }
         </#if>

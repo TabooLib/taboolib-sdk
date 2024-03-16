@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import io.izzel.taboolib.gradle.*
 <#if extraPackages ??>
-<#list extraPackage as extraPackages>
+<#list extraPackages as extraPackage>
 ${extraPackage}
 </#list>
 </#if>
@@ -20,8 +20,10 @@ taboolib {
         </#list>
     }
     description {
-        name = "${pluginName}"
+        name = "${name}"
+        <#if description?has_content>
         desc("${description}")
+        </#if>
         <#if authors ??>
         contributors {
             <#list author as authors>
@@ -29,19 +31,17 @@ taboolib {
             </#list>
         }
         </#if>
-        <#if websites ??>
+        <#if website?exists>
         links {
-            <#list website as websites>
             name("${website}")
-            </#list>
         }
         </#if>
         <#if dependencies ?? || softDependencies??>
         dependencies {
-            <#list dependency as dependencies>
+            <#list dependencies as dependency>
             name("${dependency}")
             </#list>
-            <#list softDependency as softDependencies>
+            <#list softDependencies as softDependency>
                 name("${softDependency}").optional(true)
             </#list>
         }

@@ -16,7 +16,7 @@ plugins {
 taboolib {
     env {
         <#list modules as module>
-        install("${module}")
+        install(${module})
         </#list>
     }
     description {

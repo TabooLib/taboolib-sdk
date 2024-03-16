@@ -38,12 +38,16 @@ taboolib {
         </#if>
         <#if dependencies ?? || softDependencies??>
         dependencies {
-            <#list dependencies as dependency>
-            name("${dependency}")
-            </#list>
-            <#list softDependencies as softDependency>
-                name("${softDependency}").optional(true)
-            </#list>
+            <#if dependencies ??>
+                <#list dependencies as dependency>
+                    name("${dependency}")
+                </#list>
+            </#if>
+            <#if softDependencies ??>
+                <#list softDependencies as softDependency>
+                    name("${softDependency}").optional(true)
+                </#list>
+            </#if>
         }
         </#if>
     }

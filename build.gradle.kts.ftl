@@ -14,6 +14,11 @@ plugins {
 }
 
 taboolib {
+    env {
+        <#list module as modules>
+        install("${module}")
+        </#list>
+    }
     description {
         name = "${pluginName}"
         desc("${description}")

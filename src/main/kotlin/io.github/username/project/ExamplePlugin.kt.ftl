@@ -1,4 +1,4 @@
-package ${group}.${name?lower_case}
+package ${group}
 
 import taboolib.common.platform.Plugin
 import taboolib.common.platform.function.info

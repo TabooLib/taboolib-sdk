@@ -51,7 +51,7 @@ taboolib {
         }
         </#if>
     }
-    version { taboolib = "6.1.1-beta15" }
+    version { taboolib = "6.1.1-beta17" }
 }
 
 repositories {

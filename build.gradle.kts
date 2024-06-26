@@ -13,7 +13,7 @@ taboolib {
         // 安装模块
         install(UNIVERSAL, BUKKIT)
     }
-    version { taboolib = "6.1.1-beta26" }
+    version { taboolib = "6.1.2-beta10" }
 }
 
 repositories {

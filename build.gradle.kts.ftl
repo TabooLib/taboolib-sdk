@@ -9,7 +9,7 @@ ${extraPackage}
 
 plugins {
     java
-    id("io.izzel.taboolib") version "2.0.11"
+    id("io.izzel.taboolib") version "2.0.17"
     id("org.jetbrains.kotlin.jvm") version "1.8.22"
 }
 

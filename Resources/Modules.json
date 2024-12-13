@@ -61,16 +61,6 @@
         "id": "BukkitUtil"
       },
       {
-        "name": "XSeries",
-        "desc": "XSeries",
-        "id": "XSeries"
-      },
-      {
-        "name": "XSeriesItem",
-        "desc": "XSeries（XSkull 及 ItemBuilder）",
-        "id": "XSeriesItem"
-      },
-      {
         "name": "BukkitNMS",
         "desc": "Bukkit NMS",
         "id": "BukkitNMS"
@@ -135,19 +125,19 @@
         "id": "Database"
       },
       {
-        "name": "DatabaseAlkaidRedis",
+        "name": "AlkaidRedis",
         "desc": "Alkaid Redis",
-        "id": "DatabaseAlkaidRedis"
+        "id": "AlkaidRedis"
       },
       {
-        "name": "DatabaseIoc",
+        "name": "IOC",
         "desc": "IOC",
-        "id": "DatabaseIoc"
+        "id": "IOC"
       },
       {
-        "name": "DatabaseLettuceRedis",
+        "name": "LettuceRedis",
         "desc": "Lettuce Redis",
-        "id": "DatabaseLettuceRedis"
+        "id": "LettuceRedis"
       },
       {
         "name": "DatabasePlayer",
@@ -155,14 +145,19 @@
         "id": "DatabasePlayer"
       },
       {
-        "name": "DatabasePtc",
-        "desc": "Persistent Container",
-        "id": "DatabasePtc"
+        "name": "DatabasePlayerRedis",
+        "desc": "玩家 Redis 数据库",
+        "id": "DatabasePlayerRedis"
       },
       {
-        "name": "DatabasePtcObject",
+        "name": "Ptc",
+        "desc": "Persistent Container",
+        "id": "Ptc"
+      },
+      {
+        "name": "PtcObject",
         "desc": "Persistent Container With Object",
-        "id": "DatabasePtcObject"
+        "id": "PtcObject"
       }
     ],
     "script": [
